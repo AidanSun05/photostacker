@@ -1,0 +1,31 @@
+# PhotoStacker
+
+**PhotoStacker** is an Android image processing application that can take a series of photos and combine them into a single output image. It uses the median stacking procedure to achieve use cases such as noise reduction and removal of moving objects, and photos can optionally be aligned before processing to account for camera movements.
+
+## Features
+
+- Efficient median stacking procedure
+  - Reduce noise or grain effects compared to a single photo
+  - Erase objects that move and obstruct a scene
+- Configurable timer to automatically take photos at regular time intervals
+- Auto-align/stabilize photos to correct shaky input
+- Save both individual input photos and the output photo to the Gallery
+- Full HD image support
+
+## System Requirements
+
+This app supports Android 10 (API level 29) and above. Many modern mobile devices have enough computing power to run the image processing operations this app uses.
+
+## Build in Android Studio
+
+TODO
+
+## Image Processing
+
+PhotoStacker uses OpenCV in C++ to process photos and OpenMP for efficient multicore processing. For a Python and NumPy implementation of the alignment and median stacking procedure used in this app, see [Moving Object Removal](https://github.com/AidanSun05/moving-object-removal).
+
+## License
+
+PhotoStacker is licensed under the Apache License version 2.0.
+
+Copyright 2025 Aidan Sun.
