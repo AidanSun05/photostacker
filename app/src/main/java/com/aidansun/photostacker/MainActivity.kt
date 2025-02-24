@@ -232,6 +232,6 @@ class MainActivity : AppCompatActivity() {
             System.loadLibrary("photostacker")
         }
 
-        private const val TAG = "ASDSA"
+        private const val TAG = "PhotoStacker"
     }
 }
