@@ -18,7 +18,9 @@ This app supports Android 10 (API level 29) and above. Many modern mobile device
 
 ## Build in Android Studio
 
-TODO
+1. Download and extract the [OpenCV Android SDK](https://github.com/opencv/opencv/releases) into a directory of your choice.
+2. Create the `OPENCV_ANDROID` environment variable pointing to the SDK. (`OPENCV_ANDROID`/sdk/native/jni should be a valid directory.)
+3. Open and build the project in Android Studio.
 
 ## Image Processing
 
