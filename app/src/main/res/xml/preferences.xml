@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        app:title="Image alignment"
+        app:summary="Accounts for camera movements">
+
+        <SwitchPreferenceCompat
+            app:key="enableAlignment"
+            app:title="Enable image alignment"
+            app:defaultValue="true" />
+
+        <SeekBarPreference
+            app:key="numFeatures"
+            app:title="Maximum features to detect (hundreds)"
+            app:showSeekBarValue="true"
+            app:defaultValue="5"
+            app:min="1"
+            android:max="10"
+            app:dependency="enableAlignment" />
+
+        <SeekBarPreference
+            app:key="retainPercent"
+            app:title="Percent of top features to retain"
+            app:showSeekBarValue="true"
+            app:defaultValue="15"
+            app:min="1"
+            android:max="100"
+            app:dependency="enableAlignment" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Pictures">
+
+        <SeekBarPreference
+            app:key="numPictures"
+            app:title="Pictures to take"
+            app:showSeekBarValue="true"
+            app:defaultValue="5"
+            app:min="2"
+            android:max="20" />
+
+        <SeekBarPreference
+            app:key="delay"
+            app:title="Delay between pictures (s)"
+            app:showSeekBarValue="true"
+            app:defaultValue="5"
+            app:min="1"
+            android:max="20" />
+
+        <SwitchPreferenceCompat
+            app:key="saveToGallery"
+            app:title="Save individual pictures"
+            app:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="About">
+
+        <Preference
+            app:key="version"
+            app:title="Application version" />
+
+        <Preference
+            app:key="buildType"
+            app:title="Build type" />
+
+        <Preference
+            app:key="licenses"
+            app:title="Open source licenses">
+
+            <intent
+                android:targetPackage="com.aidansun.photostacker"
+                android:targetClass="com.aidansun.photostacker.LicensesActivity" />
+        </Preference>
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PhotoStacker</string>
+    <string name="camera_button_desc">take picture</string>
+    <string name="flip_button_desc">flip camera</string>
+    <string name="processing_images">Processing images…</string>
+    <string name="stop_button_desc">stop taking pictures</string>
+    <string name="image_display_desc">image display</string>
+    <string name="settings_desc">settings</string>
+</resources>

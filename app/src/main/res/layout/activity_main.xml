@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/textureView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/shutterView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF000000"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingTop="4dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="4dp">
+
+        <ImageButton
+            android:id="@+id/flipButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/flip_button_desc"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:onClick="flipButtonClick"
+            app:srcCompat="@drawable/baseline_flip_camera_android_24" />
+
+        <ImageButton
+            android:id="@+id/cameraButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/camera_button_desc"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:onClick="cameraButtonClick"
+            app:srcCompat="@drawable/baseline_camera_alt_24" />
+
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/settings_desc"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:onClick="settingsButtonClick"
+            app:srcCompat="@drawable/baseline_settings_24" />
+
+        <ImageButton
+            android:id="@+id/stopButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/stop_button_desc"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:onClick="stopButtonClick"
+            app:srcCompat="@drawable/baseline_stop_24" />
+    </LinearLayout>
+</LinearLayout>
